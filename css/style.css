@@ -2,7 +2,7 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .clearfix {
@@ -149,6 +149,10 @@ ul {
 
 img {
   padding: 10px;
+}
+
+.online-title {
+  padding-left: 0;
 }
 
 /* Bar chart stuff */

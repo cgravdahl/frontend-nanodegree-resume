@@ -98,7 +98,7 @@ var projects = {
 	]
 };
 
-function displayBio(){
+bio.display = function(){
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo["email"]);
@@ -124,7 +124,8 @@ function displayBio(){
 	$("#topContacts, #footerContacts").append(formattedLocation);
 };
 
-function displayWork(){
+
+work.display = function(){
 	for(job in work.jobs){
 		$("#workExperience").append(HTMLworkStart);
 
@@ -158,7 +159,6 @@ projects.display = function(){
 			for (image in projects.projects[project].images){
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
-				$("img").colorbox();
 			}
 		}
 	}
@@ -196,8 +196,8 @@ education.display = function(){
 	};
 };
 //Call Functions for Page
-displayBio();
-displayWork();
+bio.display();
+work.display();
 projects.display();
 education.display();
 
